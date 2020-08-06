@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>E2 Mecanizado CNC - Silla Fresia - Nombre Alumno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://juanuriarteu.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://juanuriarteu.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://juanuriarteu.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/instalar-tema/">Instalar Tema</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/configuracion/">Configuración</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/e1-planimetrias-plywood-eames/">E1 Planimetría Plywood Eames</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://juanuriarteu.github.io/docs/e2-mecanizado-cnc-silla-fresia/">E2 Mecanizado CNC - Silla Fresia</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/e3-mecanizado-2.5d/">E3 Mecanizado 2.5 D</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/e4-bonus-gh/">E4 Molde y Fundición GH</a>
+    </li>
+    
+    <li class="">
+      <a href="https://juanuriarteu.github.io/docs/objetivos/">Objetivos del Curso</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">E2 Mecanizado CNC - Silla Fresia</h1>
+<div class="content ">
+  <p>Ejemplo de Mecanizado CNC para la Silla Fresia</p>
+<h3 id="objetivo-general">Objetivo General</h3>
+<ol>
+<li>Comprender el manejo de las herramientas básicas del software Fusion 360 para el uso de mecanizado en router CNC.</li>
+</ol>
+<h3 id="objetivo-específicos">Objetivo Específicos</h3>
+<ol>
+<li>Entender el funcionamiento de cortes, seteo de Máquina, de fresa y direcciones de cortes.</li>
+<li>Uso de Drawings en Fusion 360.</li>
+<li>Uso de Contours.</li>
+<li>Uso de Pocket.</li>
+<li>Uso de Trace.</li>
+<li>Uso de Tabs</li>
+<li>Entender los software de diseño 3D desde una perspectiva de fabricación.</li>
+</ol>
+<p><img src="/img/fresia/cnc.png" alt="Planimetría_1"></p>
+<h1 id="qué-es-el-mecanizado-cnc">¿Qué es el mecanizado CNC?</h1>
+<p>El control numérico por computadora (o más comúnmente conocido como CNC) es un sistema que permite controlar en todo momento la posición de un elemento físico. Normalmente una herramienta, que está montada en una máquina.</p>
+<p>Esto se consigue mediante un programa y un conjunto de órdenes añadidas. Con ambos, se pueden controlar las coordenadas de posición de un punto (la herramienta que trabaja el producto) respecto a un origen (la posición de la máquina). En pocas palabras, estamos trabajando con una especie de GPS pero aplicado al mundo de los mecanizados, y muchísimo más preciso.</p>
+<p>Si tuviéramos un cubo, cada una de las aristas se compondría de unas coordenadas propias e únicas. Así, para dirigir una punta de una herramienta al tocar cada una de las coordenadas, solo hay que introducir las órdenes pertinentes en el programa. Se cargará en la máquina, la cual, ejecutará todos los caminos. La primera cifra representa el desplazamiento sobre el eje X, la segunda sobre el eje Y, y la tercera sobre el eje Z. Como se puede observar, el trabajo se realiza sobre un plano tridimensional.</p>
+<h3 id="videos-del-proceso">Videos Del Proceso</h3>
+<p>En primer lugar tomamos las distintas partes de la silla y las colocamos de manera ordenada y consecutiva en media plancha de terciado, para luego  realizar los distintos cortes</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/pasos.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Luego seleccionamos una fresa para que haga los cortes.</p>
+<p><img src="/img/fresia/fresa.png" alt="Planimetría_1"></p>
+<p>Luego dimos la orden para hacer contours en los sacados de las sillas para poder ensamblar las distintas piezas.
+<img src="/img/fresia/10.png" alt="Planimetría_1"><img src="/img/fresia/13.png" alt="Planimetría_1">
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/Contour.mp4"  type="video/mp4">
+    </video>
+</div></p>
+<p>Estas sacados tienen esta forma debido a que fresadora corta por el interior del material, esta no lo hace en ángulo recto porque la fresa cala naturalmente en forma redonda y no tiene el espacio suficiente como para corregir este “error”. Sin embargo, a diferencia del caso anterior, al realizar los cortes exteriores, la máquina sí tiene el espacio suficiente como para simular un ángulo recto utilizando la misma cortadora, como podemos apreciar en color verde.</p>
+<p>Más tarde tuvimos que hacer sacados llamados Pocket,en los cuales van en las intersecciones donde se juntan las distintas piezas para que así encajen.
+<img src="/img/fresia/.png" alt="Planimetría_1">
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/Pocket.mp4"  type="video/mp4">
+    </video>
+</div></p>
+<p>Luego se hacen nuevamente contours, pero esta vez para cortar la pieza completa, en esta ocasión se hacen secciones de tabs para que la pieza no se desprenda al tiritar por la vibración de la máquina. Es decir, se mantendrá unida a la plancha por pequeñas secciones de madera.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/tabs.mp4"  type="video/mp4">
+    </video>
+</div></p>
+<p>A continuación una simulación de el proceso completo del corte y su recorrido.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/Simulacion.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Por último, para el asiento se ejecutó un tipo de calado llamado Trace el cual permite darle curvatura a la madera, lo cual se logra mediante pequeños cortes en la madera.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fresia/asiento.mp4"  type="video/mp4">
+    </video>
+</div>
+<p><img src="/img/fresia/cortes.png" alt="Planimetría_1">
+<img src="/img/fresia/lineas.png" alt="Planimetría_1"></p>
+<p><div>
+    <iframe 
+    src="https://alumnos2132.autodesk360.com/shares/public/SH56a43QTfd62c1cd9681980d950327301c3?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//10.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//10.jpg" alt="10th" />
+				    </div>
+			      <figcaption>
+		          <p>10th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//10.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//11.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//11.jpg" alt="11th" />
+				    </div>
+			      <figcaption>
+		          <p>11th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//11.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//12.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//12.jpg" alt="12th" />
+				    </div>
+			      <figcaption>
+		          <p>12th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//12.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//13.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//13.jpg" alt="13th" />
+				    </div>
+			      <figcaption>
+		          <p>13th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//13.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//14.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//14.jpg" alt="14th" />
+				    </div>
+			      <figcaption>
+		          <p>14th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//14.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//15.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//15.jpg" alt="15th" />
+				    </div>
+			      <figcaption>
+		          <p>15th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//15.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//16.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//16.jpg" alt="16th" />
+				    </div>
+			      <figcaption>
+		          <p>16th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//16.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//17.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//17.jpg" alt="17th" />
+				    </div>
+			      <figcaption>
+		          <p>17th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//17.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//18.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//18.jpg" alt="18th" />
+				    </div>
+			      <figcaption>
+		          <p>18th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//18.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//19.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//19.jpg" alt="19th" />
+				    </div>
+			      <figcaption>
+		          <p>19th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//19.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//20.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//20.jpg" alt="20th" />
+				    </div>
+			      <figcaption>
+		          <p>20th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//20.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//21.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//21.jpg" alt="21st" />
+				    </div>
+			      <figcaption>
+		          <p>21st</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//21.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//22.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//22.jpg" alt="22nd" />
+				    </div>
+			      <figcaption>
+		          <p>22nd</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//22.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//23.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//23.jpg" alt="23rd" />
+				    </div>
+			      <figcaption>
+		          <p>23rd</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//23.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//24.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//24.jpg" alt="24th" />
+				    </div>
+			      <figcaption>
+		          <p>24th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//24.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//25.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//25.jpg" alt="25th" />
+				    </div>
+			      <figcaption>
+		          <p>25th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//25.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//26.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//26.jpg" alt="26th" />
+				    </div>
+			      <figcaption>
+		          <p>26th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//26.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//27.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//27.jpg" alt="27th" />
+				    </div>
+			      <figcaption>
+		          <p>27th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//27.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//28.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//28.jpg" alt="28th" />
+				    </div>
+			      <figcaption>
+		          <p>28th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//28.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//29.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//29.jpg" alt="29th" />
+				    </div>
+			      <figcaption>
+		          <p>29th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//29.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//3%20%282%29.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//3%20%282%29.jpg" alt="3 (2)" />
+				    </div>
+			      <figcaption>
+		          <p>3 (2)</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//3%20%282%29.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//30.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//30.jpg" alt="30th" />
+				    </div>
+			      <figcaption>
+		          <p>30th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//30.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//31.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//31.jpg" alt="31st" />
+				    </div>
+			      <figcaption>
+		          <p>31st</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//31.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//32.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//32.jpg" alt="32nd" />
+				    </div>
+			      <figcaption>
+		          <p>32nd</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//32.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//33.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//33.jpg" alt="33rd" />
+				    </div>
+			      <figcaption>
+		          <p>33rd</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//33.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//34.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//34.jpg" alt="34th" />
+				    </div>
+			      <figcaption>
+		          <p>34th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//34.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//4.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//4.jpg" alt="4th" />
+				    </div>
+			      <figcaption>
+		          <p>4th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//4.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//5.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//5.jpg" alt="5th" />
+				    </div>
+			      <figcaption>
+		          <p>5th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//5.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//6.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//6.jpg" alt="6th" />
+				    </div>
+			      <figcaption>
+		          <p>6th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//6.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//7.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//7.jpg" alt="7th" />
+				    </div>
+			      <figcaption>
+		          <p>7th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//7.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//8.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//8.jpg" alt="8th" />
+				    </div>
+			      <figcaption>
+		          <p>8th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//8.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//9.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//9.jpg" alt="9th" />
+				    </div>
+			      <figcaption>
+		          <p>9th</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//9.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-07-21%20044550.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-07-21%20044550.png" alt="Anotación 2020 07 21 044550" />
+				    </div>
+			      <figcaption>
+		          <p>Anotación 2020 07 21 044550</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-07-21%20044550.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20015347.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20015347.png" alt="Anotación 2020 08 04 015347" />
+				    </div>
+			      <figcaption>
+		          <p>Anotación 2020 08 04 015347</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20015347.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20045751.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20045751.png" alt="Anotación 2020 08 04 045751" />
+				    </div>
+			      <figcaption>
+		          <p>Anotación 2020 08 04 045751</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//Anotaci%c3%b3n%202020-08-04%20045751.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//adap1.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//adap1.jpg" alt="Adap1" />
+				    </div>
+			      <figcaption>
+		          <p>Adap1</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//adap1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//adaptative.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//adaptative.png" alt="Adaptative" />
+				    </div>
+			      <figcaption>
+		          <p>Adaptative</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//adaptative.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//ball.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//ball.png" alt="Ball" />
+				    </div>
+			      <figcaption>
+		          <p>Ball</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//ball.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//box.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//box.png" alt="Box" />
+				    </div>
+			      <figcaption>
+		          <p>Box</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//box.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//cnc.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//cnc.png" alt="Cnc" />
+				    </div>
+			      <figcaption>
+		          <p>Cnc</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//cnc.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//cont.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//cont.png" alt="Cont" />
+				    </div>
+			      <figcaption>
+		          <p>Cont</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//cont.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//cortes.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//cortes.png" alt="Cortes" />
+				    </div>
+			      <figcaption>
+		          <p>Cortes</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//cortes.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//extrude.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//extrude.png" alt="Extrude" />
+				    </div>
+			      <figcaption>
+		          <p>Extrude</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//extrude.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//fresa%20cambio.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//fresa%20cambio.png" alt="Fresa cambio" />
+				    </div>
+			      <figcaption>
+		          <p>Fresa cambio</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//fresa%20cambio.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//fresa.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//fresa.png" alt="Fresa" />
+				    </div>
+			      <figcaption>
+		          <p>Fresa</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//fresa.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//giro.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//giro.png" alt="Giro" />
+				    </div>
+			      <figcaption>
+		          <p>Giro</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//giro.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//huevos.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//huevos.jpg" alt="Huevos" />
+				    </div>
+			      <figcaption>
+		          <p>Huevos</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//huevos.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//lineas.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//lineas.png" alt="Lineas" />
+				    </div>
+			      <figcaption>
+		          <p>Lineas</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//lineas.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//maquina.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//maquina.png" alt="Maquina" />
+				    </div>
+			      <figcaption>
+		          <p>Maquina</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//maquina.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//mold5.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//mold5.jpg" alt="Mold5" />
+				    </div>
+			      <figcaption>
+		          <p>Mold5</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//mold5.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//mold6.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//mold6.jpg" alt="Mold6" />
+				    </div>
+			      <figcaption>
+		          <p>Mold6</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//mold6.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//paral.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//paral.png" alt="Paral" />
+				    </div>
+			      <figcaption>
+		          <p>Paral</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//paral.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//parallel.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//parallel.png" alt="Parallel" />
+				    </div>
+			      <figcaption>
+		          <p>Parallel</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//parallel.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//paraset.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//paraset.png" alt="Paraset" />
+				    </div>
+			      <figcaption>
+		          <p>Paraset</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//paraset.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//project.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//project.png" alt="Project" />
+				    </div>
+			      <figcaption>
+		          <p>Project</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//project.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//sacado1.jpg');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//sacado1.jpg" alt="Sacado1" />
+				    </div>
+			      <figcaption>
+		          <p>Sacado1</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//sacado1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//setap.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//setap.png" alt="Setap" />
+				    </div>
+			      <figcaption>
+		          <p>Setap</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//setap.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//setaps%20%281%29.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//setaps%20%281%29.png" alt="Setaps (1)" />
+				    </div>
+			      <figcaption>
+		          <p>Setaps (1)</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//setaps%20%281%29.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//setup.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//setup.png" alt="Setup" />
+				    </div>
+			      <figcaption>
+		          <p>Setup</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//setup.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//simula.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//simula.png" alt="Simula" />
+				    </div>
+			      <figcaption>
+		          <p>Simula</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//simula.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//step.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//step.png" alt="Step" />
+				    </div>
+			      <figcaption>
+		          <p>Step</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//step.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://juanuriarteu.github.io//img/fresia//stock.png');" >
+				      <img itemprop="thumbnail" src="https://juanuriarteu.github.io//img/fresia//stock.png" alt="Stock" />
+				    </div>
+			      <figcaption>
+		          <p>Stock</p>
+			      </figcaption>
+				    <a href="https://juanuriarteu.github.io//img/fresia//stock.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
