@@ -12,24 +12,6 @@
     
     
     <item>
-      <title>Instalar Tema</title>
-      <link>https://juanuriarteu.github.io/docs/instalar-tema/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://juanuriarteu.github.io/docs/instalar-tema/</guid>
-      <description>Tutorial de intalación del tema utilizando el Framework Hugo.</description>
-    </item>
-    
-    <item>
-      <title>Configuración</title>
-      <link>https://juanuriarteu.github.io/docs/configuracion/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://juanuriarteu.github.io/docs/configuracion/</guid>
-      <description>Tutorial de configuración básica del menú y otros elementos del tema.</description>
-    </item>
-    
-    <item>
       <title>Ejemplo Shortcodes</title>
       <link>https://juanuriarteu.github.io/docs/ejemplo/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
@@ -39,21 +21,12 @@
     </item>
     
     <item>
-      <title>Ejemplos Markdown</title>
-      <link>https://juanuriarteu.github.io/docs/markdown/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://juanuriarteu.github.io/docs/markdown/</guid>
-      <description>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</description>
-    </item>
-    
-    <item>
       <title>E1 Planimetría Plywood Eames</title>
       <link>https://juanuriarteu.github.io/docs/e1-planimetrias-plywood-eames/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://juanuriarteu.github.io/docs/e1-planimetrias-plywood-eames/</guid>
-      <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
+      <description>Uso de herramientas básicas de Fusion utilizando la Silla Plywood Eames</description>
     </item>
     
     <item>
@@ -71,7 +44,7 @@
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://juanuriarteu.github.io/docs/e3-mecanizado-2.5d/</guid>
-      <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
+      <description>Uso del mecanizado 2.5 para respaldo de silla en Fusion360.</description>
     </item>
     
     <item>
@@ -84,12 +57,21 @@
     </item>
     
     <item>
-      <title>Encargo Bonus - Materiales Reciclados</title>
-      <link>https://juanuriarteu.github.io/docs/e4-bonus-materiales/</link>
+      <title>Exploración de Material y Molde</title>
+      <link>https://juanuriarteu.github.io/docs/molde-danijuanrc/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
-      <guid>https://juanuriarteu.github.io/docs/e4-bonus-materiales/</guid>
-      <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
+      <guid>https://juanuriarteu.github.io/docs/molde-danijuanrc/</guid>
+      <description>Acercamiento a nuevos materiales ecológicos y el encargo del molde  junto a Rodrigo Calderón y Daniel Sanchez.</description>
+    </item>
+    
+    <item>
+      <title>Investigación de Materiales y Diseño de Contenedor</title>
+      <link>https://juanuriarteu.github.io/docs/e4-bonus-investigaci%C3%B3n-materiales/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://juanuriarteu.github.io/docs/e4-bonus-investigaci%C3%B3n-materiales/</guid>
+      <description>Pequeña descripción e investigación de los materiales utilizados en la creación de maceteros orgánicos.</description>
     </item>
     
     <item>
